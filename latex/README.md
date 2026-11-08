@@ -1,6 +1,6 @@
 # Lab 2 report (LaTeX)
 
-- `main.tex`: the report (cover page, setup, results a to g in the order of the handout, attachments).
+- `main.tex`: the report (cover page, setup, results a to g in the order of the handout, repository contents).
 - `images/`: the figures used by the report. File names start with the handout part they belong to.
 
 | Image | Part | Source |

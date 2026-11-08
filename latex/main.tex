@@ -85,7 +85,7 @@
 \begin{document}
 \emergencystretch=3em
 % ============================================================
-\newcommand{\zipname}{Lab2\_Attachments.zip} % <-- change to your zip's file name
+\newcommand{\repourl}{https://github.com/KoomeMartin/Aliasing}
 % -------------------------------------------------------
 % COVER PAGE
 % -------------------------------------------------------
@@ -119,7 +119,7 @@
 % -------------------------------------------------------
 \section{Setup}
 
-All results in this report were produced with the application developed for this lab. The application source code, the audio files and the figures are in the attachment \texttt{\zipname}. The files are listed in the \texttt{README.md} at the root of that archive.
+All results in this report were produced with the application developed for this lab. The application source code, the audio files and the figures are in this GitHub repository: \href{\repourl}{\texttt{\repourl}}. The files are listed in the \texttt{README.md} at the root of the repository.
 
 The processing used for every result is as follows.
 \begin{itemize}
@@ -138,7 +138,7 @@ The processing used for every result is as follows.
 
 \subsection{(a) Pure tones}
 
-Below are the six tone files that were generated at a sampling rate of 16 kHz with 16 bits per sample (signed integers). Each file lasts 5 s. All six frequencies are below the Nyquist frequency of 8 kHz.
+Below is the table that shows the six tone files that were generated at a sampling rate of 16 kHz with 16 bits per sample (signed integers). Each file lasts 5 s. All six frequencies are below the Nyquist frequency of 8 kHz.
 
 \begin{table}[H]
 \centering
@@ -154,12 +154,12 @@ Frequency (Hz) & File \\
 7000 & \texttt{tone\_7000Hz\_16k\_16bit.wav} \\
 \bottomrule
 \end{tabular}
-\caption{Generated tone files (folder \texttt{out/tones} in the attachment).}
+\caption{Generated tone files (folder \texttt{out/tones} in the repository).}
 \end{table}
 
 \subsection{(b) Spectrograph of the 2500 Hz tone}
 
-Below is the spectrograph of the 2500 Hz tone (Figure~\ref{fig:b}).
+Below is the graph that shows the spectrograph of the 2500 Hz tone (Figure~\ref{fig:b}).
 
 \begin{figure}[H]
   \centering
@@ -172,7 +172,7 @@ The spectrograph shows a single horizontal red line at 2500 Hz that lasts for th
 
 \subsection{(c) Spectrograph of the 5000 Hz tone}
 
-Below is the spectrograph of the 5000 Hz tone (Figure~\ref{fig:c}).
+Below is the graph that shows the spectrograph of the 5000 Hz tone (Figure~\ref{fig:c}).
 
 \begin{figure}[H]
   \centering
@@ -185,7 +185,7 @@ The spectrograph shows the same pattern as Figure~\ref{fig:b}, now as a single r
 
 \subsection{(d) 5000 Hz tone sub-sampled by 2}
 
-Below is the spectrograph of the 5000 Hz tone after sub-sampling by a factor of 2 without filtering (Figure~\ref{fig:d}). The new sampling rate is 8 kHz.
+Below is the graph that shows the spectrograph of the 5000 Hz tone after sub-sampling by a factor of 2 without filtering (Figure~\ref{fig:d}). The new sampling rate is 8 kHz.
 
 \begin{figure}[H]
   \centering
@@ -204,7 +204,7 @@ which is a sine at $\tfrac{3}{8} \cdot 8000 = 3000$ Hz (with inverted sign, whic
 
 \subsection{(e) Music clip}
 
-The music clip is a 10 s recording at 16 kHz with 16 bits per sample. It is included in the attachment as \texttt{Music/music\_play.wav}. Below is its spectrograph (Figure~\ref{fig:e}).
+The music clip is a 10 s recording at 16 kHz with 16 bits per sample. It is included in the repository as \texttt{Music/music\_play.wav}. Below is the graph that shows its spectrograph (Figure~\ref{fig:e}).
 
 \begin{figure}[H]
   \centering
@@ -223,7 +223,7 @@ The music clip is a 10 s recording at 16 kHz with 16 bits per sample. It is incl
 
 \subsection{(f) Sub-sampling the music by 2, 4 and 5 (no filtering)}
 
-Below are the spectrographs of the music after sub-sampling by 2, 4 and 5 without filtering. In each figure the upper plot is the original and the lower plot is the sub-sampled file. Table~\ref{tab:f} gives the sampling rate of each file, the highest frequency it can represent, and the range of original frequencies that falls above this limit.
+Below are the graphs that show the spectrographs of the music after sub-sampling by 2, 4 and 5 without filtering (Figures~\ref{fig:f2}, \ref{fig:f4} and \ref{fig:f5}). In each figure the upper plot is the original and the lower plot is the sub-sampled file. Table~\ref{tab:f} gives the sampling rate of each file, the highest frequency it can represent, and the range of original frequencies that falls above this limit.
 
 \begin{table}[H]
 \centering
@@ -274,7 +274,7 @@ $M$ & New $F_s$ (Hz) & New Nyquist (Hz) & Original content above the limit \\
 
 \subsection{(g) Low-pass filtering before sub-sampling}
 
-Below are the spectrographs of the music after block-by-block low-pass filtering followed by sub-sampling. The cutoff is 4 kHz for a factor of 2, 2 kHz for a factor of 4 and 1.6 kHz for a factor of 5. In each figure the upper plot is the filtered file at the original sampling rate of 16 kHz and the lower plot is the filtered file after sub-sampling. In each case the cutoff equals the new Nyquist frequency.
+Below are the graphs that show the spectrographs of the music after block-by-block low-pass filtering followed by sub-sampling (Figures~\ref{fig:g2}, \ref{fig:g4} and \ref{fig:g5}). The cutoff is 4 kHz for a factor of 2, 2 kHz for a factor of 4 and 1.6 kHz for a factor of 5. In each figure the upper plot is the filtered file at the original sampling rate of 16 kHz and the lower plot is the filtered file after sub-sampling. In each case the cutoff equals the new Nyquist frequency.
 
 \begin{figure}[H]
   \centering
@@ -304,16 +304,17 @@ Below are the spectrographs of the music after block-by-block low-pass filtering
 \textbf{Which do I prefer?} I prefer the files that were filtered before sub-sampling. They are a reduced version of the original: only content that the lower sampling rate can represent remains, and it is at its true frequency. Without filtering, content above the new Nyquist frequency is folded onto the music and cannot be separated from it afterwards. Removing it first, as the low-pass filter does, is the only way to avoid this once the sampling rate is reduced.
 
 % -------------------------------------------------------
-% ATTACHMENTS
+% REPOSITORY CONTENTS
 % -------------------------------------------------------
-\section{Attachments}
+\section{Repository Contents}
 
-The archive \texttt{\zipname} contains the following.
+The GitHub repository \href{\repourl}{\texttt{\repourl}} contains the following.
 \begin{itemize}
   \item The application source code (\texttt{main.py}, \texttt{dsp/}, \texttt{audio/}, \texttt{ui/}) and its tests.
   \item The tone files for part (a) in \texttt{out/tones}.
   \item The music clip and all sub-sampled and filtered audio files for parts (e), (f) and (g) in \texttt{Music/}.
   \item The requirements documents, the design document and the interrogation file.
+  \item The source of this report in \texttt{latex/}.
 \end{itemize}
 
 \end{document}
